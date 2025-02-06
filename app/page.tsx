@@ -1,4 +1,3 @@
-import EggTimer from "../components/EggTimer";
 import OptionBoxes from "../components/OptionBoxes";
 
 export default function Home() {
