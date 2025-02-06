@@ -22,7 +22,8 @@ const OptionBoxes = () => {
     false,
     false,
   ]); // Sound played state for each box
-  const [inputTimes, setInputTimes] = useState([300, 360, 420, 480, 600]); // User defined input times for each box
+  //   const [inputTimes, setInputTimes] = useState([300, 360, 420, 480, 600]); // User defined input times for each box
+  const [inputTimes] = useState([300, 360, 420, 480, 600]); // User defined input times for each box
 
   // Function to start/pause the timer for a specific box
   const toggleTimer = (index: number) => {
