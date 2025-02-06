@@ -14,8 +14,151 @@
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+
+/* styles/globals.css */
+
+/* globals.css or Home.module.css */
+
+/* Background and layout */
+.home-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, #f4e1d2, #f9f9f9);
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  color: #ff7043; /* Warm egg-like orange */
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Option Boxes Container */
+.box-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Individual Box Styles */
+.box {
+  width: 220px;
+  height: 300px;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text visibility */
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.box-title {
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.box-timer {
+  font-size: 22px;
+  margin-top: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Time Input Styling */
+.time-input {
+  padding: 8px 12px;
+  font-size: 16px;
+  width: 70px;
+  text-align: center;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  margin-top: 10px;
+  transition: all 0.2s ease;
+}
+
+.time-input:focus {
+  background-color: #fff8e1;
+  border: 2px solid #ff7043;
+}
+
+/* Button Styling */
+.timer-button,
+.reset-button {
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.timer-button {
+  background-color: #ff7043;
+  color: white;
+}
+
+.timer-button:hover {
+  background-color: #e64a19;
+  transform: scale(1.05);
+}
+
+.reset-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.reset-button:hover {
+  background-color: #d32f2f;
+  transform: scale(1.05);
+}
+
+/* Optional: Add a more subtle shadow on buttons */
+.timer-button:active,
+.reset-button:active {
+  transform: scale(0.95);
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .box-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box {
+    width: 90%;
+    margin-bottom: 20px;
+  }
 }
